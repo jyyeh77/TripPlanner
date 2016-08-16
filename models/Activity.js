@@ -1,3 +1,6 @@
+var db = require('./database');
+var Sequelize = require('sequelize');
+
 var Activity = db.define("activity", {
 	name:{
 		type:Sequelize.TEXT,
@@ -9,3 +12,5 @@ var Activity = db.define("activity", {
 	}
 
 });
+
+module.exports = Activity;
