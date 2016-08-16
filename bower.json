@@ -1,0 +1,22 @@
+{
+  "name": "trip_planner_static",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Jose R.",
+    "Justin Y."
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jyyeh77/trip_planner_static",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0"
+  }
+}

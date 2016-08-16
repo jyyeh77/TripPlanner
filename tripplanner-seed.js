@@ -3,7 +3,7 @@
 
 var Promise = require('bluebird');
 var db = require('./models/database');
-var Model = require('./models');
+var Model = require('./models'); // automatically fetches exports from index.js
 var Place = Model.place;
 var Hotel = Model.hotel;
 var Restaurant = Model.restaurant;

@@ -1,3 +1,5 @@
+//  Creates associations with Place database and exports for tripplanner-seed.js to use
+
 var Sequelize = require('sequelize');
 var Hotel = require('./Hotel');
 var Restaurant = require('./Restaurant');
