@@ -3,7 +3,7 @@ var swig = require('swig');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var path = require('path'); // might be unnecessary
-
+var models = require('./models');
 var app = express();
 
 // SWIG RENDERING //
@@ -23,16 +23,6 @@ app.use(bodyParser.json());
 app.use('/bower', express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/public'));
 
-
-// app.get('/', function (req, res) {
-// 	res.redirect('/wiki');
-// });
-
-// app.use(function (err, req, res, next) {
-// 	console.error(err);
-// 	res.status(500).send(err.message);
-// });
-
 // catch 404 (i.e., no route was hit) and forward to error handler
 app.use(function(req, res, next) {
 	var err = new Error('Not Found');
@@ -48,5 +38,22 @@ app.use(function(err, req, res, next) {
 		'error'
 	);
 });
+
+models.Place.sync({})
+  .then(function(){
+    return models.Activity.sync({});
+  })
+  .then(function(){
+    return models.Restaurant.sync({});
+  })
+  .then(function(){
+    return models.Hotel.sync({});
+  })
+  .then(function(){
+    app.listen(3001, function(){
+      console.log("Listening on port 3001");
+    })
+  })
+
 
 module.exports = app;
