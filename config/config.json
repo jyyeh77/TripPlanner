@@ -1,5 +1,5 @@
 {
-  "database": "checkpoint_express_sequelize",
+  "database": "tripplanner",
   "host": "127.0.0.1",
   "dialect": "postgres",
   "logging": false

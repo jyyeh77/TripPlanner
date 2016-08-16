@@ -6,9 +6,9 @@ var Hotel = db.define("hotel", {
 		type:Sequelize.STRING,
 		allowNull:false
 	},
-	num_starts:{
+	num_stars:{
 		type:Sequelize.INTEGER,
-		allowNull:false
+		// allowNull:false
 	},
 	amenities:{
 		type:Sequelize.STRING,
