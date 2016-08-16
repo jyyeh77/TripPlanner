@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // if trying to access bower, then open up bower components
-app.use('/bower', express.static(__dirname + '/bower_components'));
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/public'));
 
 app.use('/', router);
@@ -38,7 +38,7 @@ app.use(function(err, req, res, next) {
 	res.status(err.status || 500);
 	console.error(err);
 	res.render(
-		'error'
+		'error' , {error: err.status}
 	);
 });
 
