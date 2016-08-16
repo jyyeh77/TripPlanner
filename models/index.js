@@ -8,3 +8,10 @@ var Place = require('./Place');
 Hotel.belongsTo(Place);
 Restaurant.belongsTo(Place);
 Activity.belongsTo(Place);
+
+module.exports = {
+  hotel: Hotel,
+  restaurant: Restaurant,
+  activity: Activity,
+  place: Place
+}

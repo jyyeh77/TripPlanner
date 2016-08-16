@@ -19,6 +19,4 @@ var Restaurant = db.define("restaurant", {
 	}
 });
 
-module.exports = {
-	Restaurant: Restaurant
-}
+module.exports = Restaurant;

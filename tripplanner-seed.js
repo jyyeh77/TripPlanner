@@ -1,12 +1,17 @@
 // This file should contain all the record creation needed to seed the database with its default values.
-// The data can then be loaded with the node seed.js 
+// The data can then be loaded with the node seed.js
 
 var Promise = require('bluebird');
-var db = require('./models');
-var Place = require('./models/place');
-var Hotel = require('./models/hotel');
-var Restaurant = require('./models/restaurant');
-var Activity = require('./models/activity');
+var db = require('./models/database');
+var Model = require('./models');
+var Place = Model.place;
+var Hotel = Model.hotel;
+var Restaurant = Model.restaurant;
+var Activity = Model.activity;
+// var Place = require('./models/place');
+// var Hotel = require('./models/hotel');
+// var Restaurant = require('./models/restaurant');
+// var Activity = require('./models/activity');
 
 var data = {
   hotel: [
