@@ -1,3 +1,6 @@
+var db = require('./database');
+var Sequelize = require('sequelize');
+
 var Place = db.define("place", {
 	address: {
 		type:Sequelize.STRING,

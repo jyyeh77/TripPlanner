@@ -1,3 +1,6 @@
+var db = require('./database');
+var Sequelize = require('sequelize');
+
 var Hotel = db.define("hotel", {
 	name: {
 		type:Sequelize.STRING,
