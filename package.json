@@ -1,0 +1,29 @@
+{
+  "name": "trip_planner_static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "init": "^0.1.2",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.10.0",
+    "sequelize": "^3.24.0",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jyyeh77/trip_planner_static.git"
+  },
+  "author": "Jose R., Justin Y.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jyyeh77/trip_planner_static/issues"
+  },
+  "homepage": "https://github.com/jyyeh77/trip_planner_static#readme"
+}
