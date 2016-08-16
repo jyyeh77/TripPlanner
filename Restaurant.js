@@ -11,8 +11,7 @@ var Restaurant = db.define("restaurant", {
 		type:Sequelize.INTEGER,
 		allowNull:false,
 		validate:{
-			
+			min: 1, max:10000
 		}
 	}
-
 });
