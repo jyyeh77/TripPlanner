@@ -1,5 +1,20 @@
+* {
+  box-sizing: border-box; }
+
 .navbar-default {
-  background-color: orange; }
-  .navbar-default .nav-item {
+  background-color: #0f006f; }
+  .navbar-default .navbar-brand {
+    color: white; }
+  .navbar-default li {
     display: inline-block;
-    text-align: center; }
+    line-style: none; }
+
+select {
+  display: inline; }
+
+.btn-danger {
+  font-size: 70%;
+  padding: 1px 5px 1px 5px; }
+
+#map-canvas {
+  height: 100vh; }

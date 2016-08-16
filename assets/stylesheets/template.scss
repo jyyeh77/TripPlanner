@@ -1,13 +1,31 @@
+
+* {
+  box-sizing: border-box;
+}
+
+// fix text for navbar
 .navbar-default {
-  background-color: orange;
-  .nav-item {
+  background-color: #0f006f;
+  .navbar-brand {
+    color: white;
+  }
+  li {
     display: inline-block;
-    text-align:center;
+    line-style: none;
   }
 }
 
-// .map{
-//   float: right
-// }
+select {
+  display: inline;
+}
+
+.btn-danger{
+  font-size: 70%;
+  padding: 1px 5px 1px 5px;
+}
+
+#map-canvas {
+  height: 100vh;
+}
 
 

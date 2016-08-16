@@ -1,33 +1,47 @@
 {% extends "layout.html" %}
 
 {% block content %}
-  <h3>Everything in Database</h3>
-
+  <h3><strong>Plan Your Trip Below!</strong></h3>
 
   <h4>Hotels</h4>
-  <div class="hotels">
-  <select>
-    {% for hotel in templateHotels %}
-      <option>{{hotel.name}}</option>
-    {% endfor %}
-  </select>
+  <div class="input-group">
+    <div class="hotels">
+    <select>
+      {% for hotel in templateHotels %}
+        <option>{{hotel.name}}</option>
+      {% endfor %}
+    </select>
+
+    <button class="btn btn-danger" type="button"><span class="glyphicon glyphicon-plus-sign"></span>  Set </button>
+
+    </div>
   </div>
 
   <h4>Restaurants</h4>
-  <div class="restaurants">
-  <select>
-    {% for restaurants in templateRestaurants %}
-      <option>{{restaurants.name}}</option>
-    {% endfor %}
-  </select>
+  <div class="input-group">
+    <div class="restaurants">
+    <select>
+      {% for restaurants in templateRestaurants %}
+        <option>{{restaurants.name}}</option>
+      {% endfor %}
+    </select>
+
+    <button class="btn btn-danger" type="button"><span class="glyphicon glyphicon-plus-sign"></span>  Set </button>
+
+    </div>
   </div>
 
   <h4>Activities</h4>
-  <div class="activities">
-  <select>
-    {% for activities in templateActivities %}
-      <option>{{activities.name}}</option>
-    {% endfor %}
-  </select>
+  <div class="input-group">
+    <div class="activities">
+    <select>
+      {% for activities in templateActivities %}
+        <option>{{activities.name}}</option>
+      {% endfor %}
+    </select>
+
+    <button class="btn btn-danger" type="button"> <span class="glyphicon glyphicon-plus-sign"></span>  Set </button>
+
+    </div>
   </div>
 {% endblock %}
