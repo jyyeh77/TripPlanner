@@ -19,8 +19,13 @@ var Place = db.define("place", {
 		allowNull:false
 	},
 	location:{
-		type:Sequelize.STRING,
-		allowNull:false
+		type:Sequelize.ARRAY(Sequelize.FLOAT),
+		allowNull:false,
+		defaultValue: []
 	}
-
 });
+
+
+module.exports = {
+	Place: Place
+}

@@ -17,3 +17,8 @@ var Hotel = db.define("hotel", {
 	}
 
 });
+
+
+module.exports = {
+	Hotel: Hotel
+}
