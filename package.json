@@ -12,8 +12,11 @@
     "sequelize": "^3.24.0",
     "swig": "^1.4.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.10.0"
+  },
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
