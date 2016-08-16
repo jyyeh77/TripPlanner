@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var path = require('path'); // might be unnecessary
 var models = require('./models');
 var app = express();
+var router = require('./routes');
 
 // SWIG RENDERING //
 app.engine('html', swig.renderFile);
@@ -23,6 +24,8 @@ app.use(bodyParser.json());
 app.use('/bower', express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/public'));
 
+app.use('/', router);
+
 // catch 404 (i.e., no route was hit) and forward to error handler
 app.use(function(req, res, next) {
 	var err = new Error('Not Found');
@@ -39,6 +42,7 @@ app.use(function(err, req, res, next) {
 	);
 });
 
+// Syncs all databases prior to starting server
 models.Place.sync({})
   .then(function(){
     return models.Activity.sync({});

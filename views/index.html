@@ -1,12 +1,25 @@
 {% extends "layout.html" %}
 
 {% block content %}
-  <h3>Pages</h3>
-  <hr>
-  <ul class="list-unstyled">
-    {% for page in pages %}
-    <li><a href="/wiki/{{page.urlTitle}}">{{page.title}} </a></li>
+  <h3>Everything in Database</h3>
+  <h4>Hotels</h4>
+  <select>
+    {% for hotel in templateHotels %}
+      <option>{{hotel.name}}</option>
     {% endfor %}
-  </ul>
-  </hr>
+  </select>
+
+  <h4>Restaurants</h4>
+  <select>
+    {% for restaurants in templateRestaurants %}
+      <option>{{restaurants.name}}</option>
+    {% endfor %}
+  </select>
+
+  <h4>Activities</h4>
+  <select>
+    {% for activities in templateActivities %}
+      <option>{{activities.name}}</option>
+    {% endfor %}
+  </select>
 {% endblock %}
